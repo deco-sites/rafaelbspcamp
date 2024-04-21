@@ -43,21 +43,24 @@ import * as $$$$$$31 from "./sections/Links/Shortcuts.tsx";
 import * as $$$$$$32 from "./sections/LpImages/Lpimages.tsx";
 import * as $$$$$$33 from "./sections/Miscellaneous/CampaignTimer.tsx";
 import * as $$$$$$34 from "./sections/Miscellaneous/CookieConsent.tsx";
-import * as $$$$$$35 from "./sections/Miscellaneous/Slide.tsx";
-import * as $$$$$$36 from "./sections/Newsletter/Newsletter.tsx";
-import * as $$$$$$37 from "./sections/Product/ImageGalleryFrontBack.tsx";
-import * as $$$$$$38 from "./sections/Product/NotFound.tsx";
-import * as $$$$$$39 from "./sections/Product/NotFoundChallenge.tsx";
-import * as $$$$$$40 from "./sections/Product/ProductDetails.tsx";
-import * as $$$$$$41 from "./sections/Product/ProductShelf.tsx";
-import * as $$$$$$42 from "./sections/Product/ProductShelfTabbed.tsx";
-import * as $$$$$$43 from "./sections/Product/SearchResult.tsx";
-import * as $$$$$$44 from "./sections/Product/ShelfWithImage.tsx";
-import * as $$$$$$45 from "./sections/Product/Wishlist.tsx";
-import * as $$$$$$46 from "./sections/Social/InstagramPosts.tsx";
-import * as $$$$$$47 from "./sections/Social/WhatsApp.tsx";
-import * as $$$$$$48 from "./sections/Theme/Theme.tsx";
-import * as $$$$$$49 from "./sections/Weather/CardWeather.tsx";
+import * as $$$$$$35 from "./sections/Miscellaneous/MyGallery.tsx";
+import * as $$$$$$36 from "./sections/Miscellaneous/Slide.tsx";
+import * as $$$$$$37 from "./sections/Miscellaneous/StickyImage.tsx";
+import * as $$$$$$38 from "./sections/Newsletter/Newsletter.tsx";
+import * as $$$$$$39 from "./sections/Product/ImageGalleryFrontBack.tsx";
+import * as $$$$$$40 from "./sections/Product/NotFound.tsx";
+import * as $$$$$$41 from "./sections/Product/NotFoundChallenge.tsx";
+import * as $$$$$$42 from "./sections/Product/ProductDetails.tsx";
+import * as $$$$$$43 from "./sections/Product/ProductHorizontalCard.tsx";
+import * as $$$$$$44 from "./sections/Product/ProductShelf.tsx";
+import * as $$$$$$45 from "./sections/Product/ProductShelfTabbed.tsx";
+import * as $$$$$$46 from "./sections/Product/SearchResult.tsx";
+import * as $$$$$$47 from "./sections/Product/ShelfWithImage.tsx";
+import * as $$$$$$48 from "./sections/Product/Wishlist.tsx";
+import * as $$$$$$49 from "./sections/Social/InstagramPosts.tsx";
+import * as $$$$$$50 from "./sections/Social/WhatsApp.tsx";
+import * as $$$$$$51 from "./sections/Theme/Theme.tsx";
+import * as $$$$$$52 from "./sections/Weather/CardWeather.tsx";
 
 const manifest = {
   "loaders": {
@@ -106,23 +109,27 @@ const manifest = {
       $$$$$$33,
     "deco-sites/rafaelbspcamp/sections/Miscellaneous/CookieConsent.tsx":
       $$$$$$34,
-    "deco-sites/rafaelbspcamp/sections/Miscellaneous/Slide.tsx": $$$$$$35,
-    "deco-sites/rafaelbspcamp/sections/Newsletter/Newsletter.tsx": $$$$$$36,
+    "deco-sites/rafaelbspcamp/sections/Miscellaneous/MyGallery.tsx": $$$$$$35,
+    "deco-sites/rafaelbspcamp/sections/Miscellaneous/Slide.tsx": $$$$$$36,
+    "deco-sites/rafaelbspcamp/sections/Miscellaneous/StickyImage.tsx": $$$$$$37,
+    "deco-sites/rafaelbspcamp/sections/Newsletter/Newsletter.tsx": $$$$$$38,
     "deco-sites/rafaelbspcamp/sections/Product/ImageGalleryFrontBack.tsx":
-      $$$$$$37,
-    "deco-sites/rafaelbspcamp/sections/Product/NotFound.tsx": $$$$$$38,
-    "deco-sites/rafaelbspcamp/sections/Product/NotFoundChallenge.tsx": $$$$$$39,
-    "deco-sites/rafaelbspcamp/sections/Product/ProductDetails.tsx": $$$$$$40,
-    "deco-sites/rafaelbspcamp/sections/Product/ProductShelf.tsx": $$$$$$41,
+      $$$$$$39,
+    "deco-sites/rafaelbspcamp/sections/Product/NotFound.tsx": $$$$$$40,
+    "deco-sites/rafaelbspcamp/sections/Product/NotFoundChallenge.tsx": $$$$$$41,
+    "deco-sites/rafaelbspcamp/sections/Product/ProductDetails.tsx": $$$$$$42,
+    "deco-sites/rafaelbspcamp/sections/Product/ProductHorizontalCard.tsx":
+      $$$$$$43,
+    "deco-sites/rafaelbspcamp/sections/Product/ProductShelf.tsx": $$$$$$44,
     "deco-sites/rafaelbspcamp/sections/Product/ProductShelfTabbed.tsx":
-      $$$$$$42,
-    "deco-sites/rafaelbspcamp/sections/Product/SearchResult.tsx": $$$$$$43,
-    "deco-sites/rafaelbspcamp/sections/Product/ShelfWithImage.tsx": $$$$$$44,
-    "deco-sites/rafaelbspcamp/sections/Product/Wishlist.tsx": $$$$$$45,
-    "deco-sites/rafaelbspcamp/sections/Social/InstagramPosts.tsx": $$$$$$46,
-    "deco-sites/rafaelbspcamp/sections/Social/WhatsApp.tsx": $$$$$$47,
-    "deco-sites/rafaelbspcamp/sections/Theme/Theme.tsx": $$$$$$48,
-    "deco-sites/rafaelbspcamp/sections/Weather/CardWeather.tsx": $$$$$$49,
+      $$$$$$45,
+    "deco-sites/rafaelbspcamp/sections/Product/SearchResult.tsx": $$$$$$46,
+    "deco-sites/rafaelbspcamp/sections/Product/ShelfWithImage.tsx": $$$$$$47,
+    "deco-sites/rafaelbspcamp/sections/Product/Wishlist.tsx": $$$$$$48,
+    "deco-sites/rafaelbspcamp/sections/Social/InstagramPosts.tsx": $$$$$$49,
+    "deco-sites/rafaelbspcamp/sections/Social/WhatsApp.tsx": $$$$$$50,
+    "deco-sites/rafaelbspcamp/sections/Theme/Theme.tsx": $$$$$$51,
+    "deco-sites/rafaelbspcamp/sections/Weather/CardWeather.tsx": $$$$$$52,
   },
   "apps": {
     "deco-sites/rafaelbspcamp/apps/decohub.ts": $$$$$$$$$$$0,
