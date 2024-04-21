@@ -62,24 +62,6 @@ function ProductHorizontalCard({ product }: Props) {
             </div>
           </div>
         </>
-        // const { url, productID, name, image: images, description offers, isVariantOf } = item;
-        // <a
-        //   href={item.url}
-        //   aria-label="view product"
-        //   key={item.productID}
-        // >
-        //   <Image
-        //     src={item.url!}
-        //     alt={item.alternateName}
-        //     width={WIDTH}
-        //     height={HEIGHT}
-        //     class={`bg-base-100 col-span-full row-span-full rounded w-full`}
-        //     sizes="(max-width: 640px) 50vw, 20vw"
-        //     preload={true}
-        //     loading="lazy"
-        //     decoding="async"
-        //   />
-        // </a>
       )})}
     </div>
   );

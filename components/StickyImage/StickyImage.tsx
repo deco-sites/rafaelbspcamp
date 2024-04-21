@@ -12,9 +12,17 @@ export interface Props {
   section: Section;
 }
 
+export function ErrorFallback({ error }: { error?: Error }) {
+  return (
+    <div>
+      <h2>Oops! Algo deu errado.</h2>
+      {error && <p>{error.message}</p>}
+    </div>
+  );
+}
+
 function StickyImage({ images, section }: Props) {
-  console.log('section---', section);
-  const { Component, props } = section;
+  
   return (
     <div className="w-full container mx-auto flex flex-col lg:flex-row">
       <div className="relative flex justify-stretch items-stretch flex-col lg:w-1/2 gap-1">
@@ -33,7 +41,7 @@ function StickyImage({ images, section }: Props) {
       </div>
       <div className="relative lg:w-1/2">
         <h2 className="text-5xl  uppercase max-w-lg p-8">
-          Produtos que que mudam o seu dia a dia
+          Produtos que que mudam o seu dia a dia teste
         </h2>
         <p className="text-base mb-8 px-8 ">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis amet
@@ -42,7 +50,7 @@ function StickyImage({ images, section }: Props) {
           aliquid numquam iusto.
         </p>
         <div className="lg:sticky flex flex-col w-full top-0 pt-24 pb-8 bg-white">
-          <Component {...props} />
+          {section && <section.Component {...section.props} />}
         </div>
       </div>
     </div>
