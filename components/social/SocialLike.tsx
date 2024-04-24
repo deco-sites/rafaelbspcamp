@@ -85,7 +85,7 @@ function SocialLike({ pid }: Props) {
               <path d="M15 19l2 2l4 -4" />
             </svg>
           )}
-        <span>Curtir produto! - {qtyLiked}</span>
+        <span>Curtir produto!</span>
       </button>
     </div>
   );
