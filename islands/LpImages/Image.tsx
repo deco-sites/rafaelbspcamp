@@ -3,7 +3,6 @@ import { animate, inView } from "motion";
 
 function Image() {
   useEffect(() => {
-
     inView("#hero-title", () => {
       animate("#hero-title", {
         opacity: [0, 0.3, 1],
@@ -19,7 +18,7 @@ function Image() {
     });
 
     const boxes = document.querySelectorAll(".box1");
-    boxes.forEach(function(box) {
+    boxes.forEach(function (box) {
       const delay = Number(box.getAttribute("data-delay")) || 0;
       inView(box, () => {
         animate(box, {
@@ -38,38 +37,47 @@ function Image() {
   }, []);
   return (
     <>
-    <div class="h-screen bg-gray-800 w-full flex items-center justify-center">
-      <h1
-        id="hero-title"
-        class="opacity-0 mx-auto text-9xl text-center text-white leading-[100%] "
+      <div class="h-screen bg-gray-800 w-full flex items-center justify-center">
+        <h1
+          id="hero-title"
+          class="opacity-0 mx-auto text-9xl text-center text-white leading-[100%] "
+        >
+          Testando Motion
+        </h1>
+      </div>
+      <div
+        id="boxes1"
+        class="h-screen bg-gray-400 w-full flex items-center justify-center p-10 gap-8"
       >
-        Testando Motion
-      </h1>
-    </div>
-    <div id="boxes1" class="h-screen bg-gray-400 w-full flex items-center justify-center p-10 gap-8">
         <div data-delay={0.1} class="box1 w-80 h-80 bg-gray-500"></div>
         <div data-delay={0.4} class="box1 w-80 h-80 bg-gray-500"></div>
         <div data-delay={0.8} class="box1 w-80 h-80 bg-gray-500"></div>
         <div data-delay={1.2} class="box1 w-80 h-80 bg-gray-500"></div>
         <div data-delay={1.6} class="box1 w-80 h-80 bg-gray-500"></div>
         <div data-delay={2.0} class="box1 w-80 h-80 bg-gray-500"></div>
-    </div>
-    <div id="boxes1" class="h-screen bg-gray-400 w-full flex items-center justify-center p-10 gap-8">
+      </div>
+      <div
+        id="boxes1"
+        class="h-screen bg-gray-400 w-full flex items-center justify-center p-10 gap-8"
+      >
         <div data-delay={0.1} class="box1 w-80 h-80 bg-gray-500"></div>
         <div data-delay={0.4} class="box1 w-80 h-80 bg-gray-500"></div>
         <div data-delay={0.8} class="box1 w-80 h-80 bg-gray-500"></div>
         <div data-delay={1.2} class="box1 w-80 h-80 bg-gray-500"></div>
         <div data-delay={1.6} class="box1 w-80 h-80 bg-gray-500"></div>
         <div data-delay={2.0} class="box1 w-80 h-80 bg-gray-500"></div>
-    </div>
-    <div id="boxes2" class="h-screen bg-gray-400 w-full flex items-center justify-center p-10 gap-8">
+      </div>
+      <div
+        id="boxes2"
+        class="h-screen bg-gray-400 w-full flex items-center justify-center p-10 gap-8"
+      >
         <div data-delay={0.1} class="box w-80 h-80 bg-gray-500"></div>
         <div data-delay={0.4} class="box w-80 h-80 bg-gray-500"></div>
         <div data-delay={0.8} class="box w-80 h-80 bg-gray-500"></div>
         <div data-delay={1.2} class="box w-80 h-80 bg-gray-500"></div>
         <div data-delay={1.6} class="box w-80 h-80 bg-gray-500"></div>
         <div data-delay={2.0} class="box w-80 h-80 bg-gray-500"></div>
-    </div>
+      </div>
     </>
   );
 }

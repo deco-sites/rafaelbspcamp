@@ -22,21 +22,23 @@ export function ErrorFallback({ error }: { error?: Error }) {
 }
 
 function StickyImage({ images, section }: Props) {
-  
   return (
     <div className="w-full container mx-auto flex flex-col lg:flex-row">
       <div className="relative flex justify-stretch items-stretch flex-col lg:w-1/2 gap-1">
         <div className="flex justify-center items-center flex-col gap-2">
-          {images.length ? images.map((image, index) => (
-            image?.url && 
-            <Image
-              key={`image-${index}`}
-              src={image?.url}
-              alt={image?.alt}
-              width={800}
-              
-            />
-          )) : ""}
+          {images.length
+            ? images.map((image, index) => (
+              image?.url &&
+              (
+                <Image
+                  key={`image-${index}`}
+                  src={image?.url}
+                  alt={image?.alt}
+                  width={800}
+                />
+              )
+            ))
+            : ""}
         </div>
       </div>
       <div className="relative lg:w-1/2">
