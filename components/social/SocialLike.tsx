@@ -40,7 +40,7 @@ function SocialLike({ pid }: Props) {
   return (
     <div>
       <button
-        class="flex gap-2 mt-2 min-w-52 max-w-80 btn btn-block"
+        class="flex gap-2 mt-2 lg:min-w-52 max-w-80 btn btn-block"
         onClick={handleClick}
       >
         {!hasLiked
@@ -85,7 +85,7 @@ function SocialLike({ pid }: Props) {
               <path d="M15 19l2 2l4 -4" />
             </svg>
           )}
-        <span>Curtir produto!</span>
+        <span>Curtir!</span>
       </button>
     </div>
   );
