@@ -12,15 +12,6 @@ export interface Props {
   section: Section;
 }
 
-export function ErrorFallback({ error }: { error?: Error }) {
-  return (
-    <div>
-      <h2>Oops! Algo deu errado.</h2>
-      {error && <p>{error.message}</p>}
-    </div>
-  );
-}
-
 function StickyImage({ images, section }: Props) {
   return (
     <div className="w-full container mx-auto flex flex-col lg:flex-row">

@@ -19,7 +19,7 @@ function MyGallery({ title, description, images, quantity }: Props) {
   const getImages = images.length ? images?.slice(0, quantity) : [];
 
   return (
-    <div class="w-full container mx-auto flex flex-col">
+    <div class="w-full container mx-auto flex flex-col px-4 lg:px-9 py-6 lg:py-24">
       {title && (
         <div
           class="text-5xl uppercase pb-8 p-4"
