@@ -5,6 +5,7 @@ import { formatPrice } from "../../sdk/format.ts";
 import { useOffer } from "../../sdk/useOffer.ts";
 import { relative } from "../../sdk/url.ts";
 import SocialLike from "$store/components/social/SocialLike.tsx";
+import AddToCartButton from "deco-sites/rafaelbspcamp/islands/AddToCartButton/vtex.tsx";
 
 export interface Props {
   maxWidth?:
@@ -40,7 +41,6 @@ export default function ProductHorizontalCard({ maxWidth, infoCard, animateImage
           alt={infoCard?.title}
           width={400}
           class="rounded-lg mb-5"
-          // style={{ width: `${width}px`, height: `${height}px` }}
         />
         <h2 class="line-clamp-2 text-base md:text-xl mb-2 md:mb-4">{infoCard?.title}</h2>
         <div
@@ -53,7 +53,7 @@ export default function ProductHorizontalCard({ maxWidth, infoCard, animateImage
       </div>
       <div class="grow">
         {product && product.map((item) => {
-          const { url, productID, name, image, offers } = item;
+          const { url, productID, sku, name, image, offers } = item;
           const [front, back] = image ?? [];
           const { listPrice, price } = useOffer(offers);
 
@@ -101,13 +101,17 @@ export default function ProductHorizontalCard({ maxWidth, infoCard, animateImage
                       {formatPrice(price)}
                     </p>
                   </div>
-                  <a
-                    href={url && relative(url)}
-                    aria-label="view product"
-                    class="btn btn-primary mt-2 lg:min-w-52 max-w-80"
-                  >
-                    COMPRAR
-                  </a>
+                  <AddToCartButton
+                    seller="1"
+                    productID={productID}
+                    eventParams={{
+                      items: [{
+                        item_id: sku,
+                        item_name: name,
+                        quantity: 1,
+                      }],
+                    }}
+                  />
                   <SocialLike pid={Number(productID)} />
                 </div>
               </div>
