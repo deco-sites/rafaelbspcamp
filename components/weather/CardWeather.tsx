@@ -4,16 +4,13 @@ import Image from "apps/website/components/Image.tsx";
 import { Temperature } from "apps/weather/loaders/temperature.ts";
 
 export interface Props {
-  /** @title Temperatura do local */
+  isfloatingWidget?: boolean;
   temperature: Temperature | null;
 }
 
-// interface
-
-function CardWeather({ temperature }: SectionProps<ReturnType<typeof loader>>) {
+function CardWeather({ isfloatingWidget, temperature }: SectionProps<ReturnType<typeof loader>>) {
   console.log("-Weather: ", temperature);
-
-  return (
+  return !isfloatingWidget ? (
     <div class="w-full p-4 lg:p-0">
       <div class="flex flex-col w-full xl:container px-8 lg:px-14 py-20 z-10 gap-4 lg:gap-10 bg-gray-100 rounded-lg">
         <div class="flex flex-col md:flex-row w-full justify-between items-center">
@@ -31,6 +28,17 @@ function CardWeather({ temperature }: SectionProps<ReturnType<typeof loader>>) {
           )}
         </div>
       </div>
+    </div>
+  ) : (
+    <div>
+      {temperature?.celsius && (
+        <div class="fixed w-20 lg:w-32 h-20 lg:h-32 bottom-4 right-4 rounded-full bg-white shadow-lg flex flex-col items-center justify-center">
+          <img src="/image/thermometer.svg" width={28} height={28} />
+          <h2 class="text-lg lg:text-3xl font-bold">
+            {temperature.celsius}°C
+          </h2>
+        </div>
+      )}
     </div>
   );
 }
