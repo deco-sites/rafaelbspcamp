@@ -40,7 +40,7 @@ function SocialLike({ pid }: Props) {
   return (
     <div>
       <button
-        class="flex gap-2 mt-2 lg:min-w-52 max-w-80 btn btn-block"
+        class="flex gap-2 mt-2 lg:min-w-52 btn btn-block"
         onClick={handleClick}
       >
         {!hasLiked

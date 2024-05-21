@@ -83,37 +83,39 @@ export default function ProductHorizontalCard({ maxWidth, infoCard, animateImage
                   </a>
                 </div>
 
-                <div class="flex flex-col items-center justify-center flex-grow">
-                  <p class="line-clamp-2 text-base md:text-xl mb-2 md:mb-4">{item.name}</p>
-                  <p class="line-clamp-2 text-xs md:text-sm mb-2">{item.description}</p>
+                <div class="flex flex-col lg:flex-row items-center flex-grow">
+                  <div class="flex-grow w-full lg:w-auto">
+                    <p class="line-clamp-2 text-base md:text-xl mb-2 md:mb-4">{item.name}</p>
+                    <p class="line-clamp-2 text-xs md:text-sm mb-2">{item.description}</p>
+                  </div>
+                  <div class="flex flex-col w-full lg:w-auto lg:border-l lg:border-base-400 lg:pl-6 lg:ml-6">
+                    <div class="flex gap-2">
+                      {price
+                        ? (
+                          <p class="text-xs md:text-base mb-2">
+                            {formatPrice(listPrice)}
+                          </p>
+                        )
+                        : ""}
+                      <p class="text-xs  md:text-base font-bold mb-2">
+                        {formatPrice(price)}
+                      </p>
+                    </div>
+                    <AddToCartButton
+                      seller="1"
+                      productID={productID}
+                      eventParams={{
+                        items: [{
+                          item_id: sku,
+                          item_name: name,
+                          quantity: 1,
+                        }],
+                      }}
+                    />
+                    <SocialLike pid={Number(productID)} />
+                  </div>
                 </div>
 
-                <div class="flex flex-col justify-center items-center md:border-l md:border-base-400 md:pl-6 md:ml-6">
-                  <div class="flex gap-2">
-                    {price
-                      ? (
-                        <p class="text-xs md:text-base mb-2">
-                          {formatPrice(listPrice)}
-                        </p>
-                      )
-                      : ""}
-                    <p class="text-xs  md:text-base font-bold mb-2">
-                      {formatPrice(price)}
-                    </p>
-                  </div>
-                  <AddToCartButton
-                    seller="1"
-                    productID={productID}
-                    eventParams={{
-                      items: [{
-                        item_id: sku,
-                        item_name: name,
-                        quantity: 1,
-                      }],
-                    }}
-                  />
-                  <SocialLike pid={Number(productID)} />
-                </div>
               </div>
             </>
           );

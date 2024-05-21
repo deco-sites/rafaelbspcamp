@@ -32,7 +32,7 @@ function CardWeather({ isfloatingWidget, temperature }: SectionProps<ReturnType<
   ) : (
     <div>
       {temperature?.celsius && (
-        <div class="fixed w-20 lg:w-32 h-20 lg:h-32 bottom-4 right-4 rounded-full bg-white shadow-lg flex flex-col items-center justify-center">
+        <div class="fixed w-20 lg:w-32 h-20 lg:h-32 bottom-4 right-4 rounded-full bg-white shadow-lg flex flex-col items-center justify-center z-10">
           <img src="/image/thermometer.svg" width={28} height={28} />
           <h2 class="text-lg lg:text-3xl font-bold">
             {temperature.celsius}°C
